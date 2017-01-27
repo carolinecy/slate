@@ -19,7 +19,7 @@ search: true
 
 # Introduction
 
-Welcome to the Dragon API! You can use our API to access Dragon API endpoints, which can get information on various cats, Dragons, and breeds in our database.
+Welcome to the Dragon API! You can use our API to access Dragon API endpoints, which can get information on various Dragons and breeds in our database.
 
 We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
@@ -48,14 +48,14 @@ curl "api_endpoint_here"
 ```
 
 ```javascript
-const Dragon = require('kittn');
+const Dragon = require('Dragon');
 
 let api = kittn.authorize('woooo');
 ```
 
 > Make sure to replace `woooo` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Kittn uses API keys to allow access to the API. You can register a new Dragon API key at our [developer portal](http://example.com/developers).
 
 Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
@@ -126,11 +126,11 @@ This endpoint retrieves all dragons.
 
 Parameter | Default | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+include_cats | false | If set to true, the result will also include dragons.
+available | true | If set to false, the result will include dragons that have already been adopted.
 
 <aside class="success">
-Remember — a happy kitten is an authenticated dragons!
+Remember — a happy dragon is an authenticated dragons!
 </aside>
 
 ## Get a Specific Dragon
@@ -139,14 +139,14 @@ Remember — a happy kitten is an authenticated dragons!
 require 'Dragon'
 
 api = Dragon::APIClient.authorize!('woooo')
-api.kittens.get(2)
+api.dragons.get(2)
 ```
 
 ```python
 import Dragon
 
 api = Dragon.authorize('woooo')
-api.kittens.get(2)
+api.dragons.get(2)
 ```
 
 ```shell
